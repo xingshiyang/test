@@ -6,7 +6,7 @@ git push origin master 远程推送
 git remote -v 查看远程仓库
 git remote set-url origin git@github.com:xingshiyang/test.git 创建远程仓库(ssh方式)
 git remote add origin http://... 创建远程仓库(http方式)
-git pull拉取远程仓库并更新本地状态
+git pull拉取远程仓库并更新本地状态，操作包含了git merge
 
 ls -al ~/.ssh 查看ssh秘钥
 ssh-keygen -t ed25519 -C "1725775673@qq.com" 生成ssh秘钥
