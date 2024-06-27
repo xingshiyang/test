@@ -1,0 +1,82 @@
+QDir:兼容多平台的cpp库，qt中的一部分
+
+1. QDir::QDir()
+作用: 构造一个 QDir 对象。
+参数:
+
+const QString &path：目录路径，可选。
+返回值: 无返回值，构造函数。
+2. bool QDir::exists() const
+作用: 检查目录是否存在。
+参数: 无。
+返回值: 如果目录存在，返回 true；否则返回 false。
+
+3. bool QDir::mkpath(const QString &dirName) const
+作用: 创建路径中所有不存在的目录。
+参数:
+
+const QString &dirName：要创建的路径。
+返回值: 如果路径创建成功，返回 true；否则返回 false。
+4. bool QDir::rmdir(const QString &dirName) const
+作用: 删除空目录。
+参数:
+
+const QString &dirName：要删除的目录名。
+返回值: 如果目录删除成功，返回 true；否则返回 false。
+5. bool QDir::remove(const QString &fileName)
+作用: 删除文件。
+参数:
+
+const QString &fileName：要删除的文件名。
+返回值: 如果文件删除成功，返回 true；否则返回 false。
+6. QString QDir::absolutePath() const
+作用: 返回目录的绝对路径。
+参数: 无。
+返回值: 目录的绝对路径。
+
+7. QString QDir::canonicalPath() const
+作用: 返回目录的规范路径（去除符号链接）。
+参数: 无。
+返回值: 目录的规范路径。
+
+8. void QDir::setPath(const QString &path)
+作用: 设置 QDir 对象的路径。
+参数:
+
+const QString &path：新的路径。
+返回值: 无返回值。
+9. QStringList QDir::entryList(QDir::Filters filters = NoFilter, QDir::SortFlags sort = NoSort) const
+作用: 列出目录中的条目（文件和子目录）。
+参数:
+
+QDir::Filters filters：过滤选项，如 QDir::NoFilter、QDir::Files 等。
+QDir::SortFlags sort：排序选项，如 QDir::NoSort、QDir::Name 等。
+返回值: 返回包含目录中条目名称的字符串列表。
+10. QFileInfoList QDir::entryInfoList(QDir::Filters filters = NoFilter, QDir::SortFlags sort = NoSort) const
+作用: 列出目录中的条目信息。
+参数:
+
+QDir::Filters filters：过滤选项。
+QDir::SortFlags sort：排序选项。
+返回值: 返回包含目录中条目信息的 QFileInfo 对象列表。
+11. bool QDir::setCurrent(const QString &path)
+作用: 设置当前工作目录。
+参数:
+
+const QString &path：要设置的工作目录路径。
+返回值: 如果成功设置当前工作目录，返回 true；否则返回 false。
+12. QString QDir::currentPath()
+作用: 返回当前工作目录的路径。
+参数: 无。
+返回值: 当前工作目录的路径。
+
+13. bool QDir::cd(const QString &dirName)
+作用: 切换到子目录。
+参数:
+
+const QString &dirName：要切换到的子目录名称。
+返回值: 如果成功切换目录，返回 true；否则返回 false。
+14. bool QDir::cdUp()
+作用: 切换到上级目录。
+参数: 无。
+返回值: 如果成功切换到上级目录，返回 true；否则返回 false。
