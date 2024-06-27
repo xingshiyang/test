@@ -1,0 +1,5 @@
+1.在maven项目中，要想生成所需依赖的jar包，在MANIFEST.MF文件中添加jar包名称
+2.构建jar包，要有主类入口，然后点击build->build artificad,完整流程在论文5.3节
+3.右击项目->点击open module setting->点击artifact，如果找不到Java接口，就put into root->apply->ok
+然后在META-INF中添加jar包名，相当于告诉Java类路径在哪找，然后重新构建jar包就行了
+4.junit中的@test注解，无需主函数，即可测试，mvn clean install test
