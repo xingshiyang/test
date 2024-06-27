@@ -13,4 +13,13 @@ ssh-keygen -t ed25519 -C "1725775673@qq.com" 生成ssh秘钥
 在GitHub设置中打开ssh配置，复制 id_ed25519.pub到GitHub，点击添加
 
 
+git branch 查看当前分支
+git branch newbranch_name 创建新分支
+git checkout -b new_branch_name 切换到新的分支
+git branch -d branch_name 删除指定的分支
+git branch -m old_name new_name 重命名分支
+git branch -v 查看分支的详细信息
+git branch -r 查看远程跟踪分支
+git branch -a 查看所有分支
+git branch -u origin/remote_branch  这个命令会将当前分支的上游分支设置为 origin/remote_branch。这样，在执行 git pull 或 git push 时，Git 会知道默认的远程和上游分支。
 
