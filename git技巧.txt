@@ -23,3 +23,5 @@ git branch -r 查看远程跟踪分支
 git branch -a 查看所有分支
 git branch -u origin/remote_branch  这个命令会将当前分支的上游分支设置为 origin/remote_branch。这样，在执行 git pull 或 git push 时，Git 会知道默认的远程和上游分支。
 
+git pull --rebase 拉取并删除冗余提交
+
